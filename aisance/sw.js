@@ -1,7 +1,7 @@
 /* Service worker : garde le guide en cache pour qu'il marche sans connexion.
    Il répond tout de suite depuis le cache, puis met le cache à jour en arrière-plan :
    une nouvelle version publiée apparaît à l'ouverture suivante. */
-const CACHE = 'guide-aisance-6ad79eb948fd';
+const CACHE = 'guide-aisance-5b9f5ee04cea';
 const FICHIERS = ['./', './index.html', './manifest.webmanifest', './icon-180.png', './icon-192.png', './icon-512.png'];
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(FICHIERS)).then(() => self.skipWaiting()));
